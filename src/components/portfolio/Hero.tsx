@@ -73,7 +73,7 @@ export function Hero() {
             variants={rise}
             initial="hidden"
             animate="show"
-            className="font-display text-stretch text-center text-[18vw] font-900 uppercase md:text-right md:text-[9vw]"
+            className="font-display text-stretch text-center text-[18vw] font-black uppercase md:text-right md:text-[9vw]"
           >
             Digital
           </motion.h1>
@@ -113,7 +113,7 @@ export function Hero() {
               variants={rise}
               initial="hidden"
               animate="show"
-              className="font-display text-stretch text-center text-[18vw] font-900 uppercase md:text-left md:text-[9vw]"
+              className="font-display text-stretch text-center text-[18vw] font-black uppercase md:text-left md:text-[9vw]"
             >
               Developer
             </motion.h1>
@@ -157,7 +157,7 @@ export function Hero() {
             initial={{ y: "100%" }}
             animate={{ y: 0 }}
             transition={{ delay: 0.9, duration: 0.9, ease }}
-            className="text-center font-display text-[9vw] font-800 uppercase leading-none text-muted-foreground/40 md:text-[5vw]"
+            className="text-center font-display text-[9vw] font-extrabold uppercase leading-none text-muted-foreground/40 md:text-[5vw]"
           >
             The only portfolio you need
           </motion.p>
