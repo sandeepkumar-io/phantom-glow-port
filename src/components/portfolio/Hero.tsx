@@ -73,7 +73,7 @@ export function Hero() {
             variants={rise}
             initial="hidden"
             animate="show"
-            className="font-display text-stretch text-center text-[18vw] font-black uppercase md:text-right md:text-[9vw]"
+            className="font-display text-stretch text-center text-[18vw] font-black uppercase md:text-right md:text-[6.5vw]"
           >
             Digital
           </motion.h1>
@@ -113,7 +113,7 @@ export function Hero() {
               variants={rise}
               initial="hidden"
               animate="show"
-              className="font-display text-stretch text-center text-[18vw] font-black uppercase md:text-left md:text-[9vw]"
+              className="font-display text-stretch text-center text-[18vw] font-black uppercase md:text-left md:text-[6.5vw]"
             >
               Developer
             </motion.h1>
