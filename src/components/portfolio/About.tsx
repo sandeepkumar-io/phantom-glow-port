@@ -1,20 +1,21 @@
 import { motion } from "framer-motion";
 import { Instagram, Linkedin, Mail, MessageCircle, Send } from "lucide-react";
 import { skillGroups } from "@/lib/portfolio-data";
-import heroPortrait from "@/assets/image copy.png";
+import heroPortrait from "@/assets/piyush.png";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
 const education = [
-  "Bachelor of Commerce, Delhi University",
-  "Senior Secondary, Gurusharan Convent School",
-  "Advanced Digital Marketing Certification",
+  "Digital Marketing & Creative Strategy 1.5+ Years Experience",
+  "Managed social media campaigns and brand growth initiatives",
+  "Created AI-powered content, visuals, and marketing assets",
+  "Skilled in graphic design, video editing, and digital storytelling",
 ];
 
 const workExperience = [
-  "Digital Marketing Executive & Creative Designer",
+  "1.5+ Years in Digital Marketing & Branding",
   "AI Content Creator & Graphic Designer",
-  "Brand Campaigns & Visual Storytelling",
+  "Social Media Strategy & Brand Growth Specialist",
 ];
 
 const socialLinks = [
@@ -22,7 +23,7 @@ const socialLinks = [
   { label: "Email", icon: Mail, href: "#contact" },
   { label: "WhatsApp", icon: MessageCircle, href: "#" },
   { label: "Instagram", icon: Instagram, href: "#" },
-  { label: "Send Message", icon: Send, href: "#contact" },
+  
 ];
 
 export function About() {
@@ -73,12 +74,8 @@ export function About() {
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.24, ease }}
-              className="absolute left-1/2 top-[52%] h-auto w-[76%] max-w-[620px] -translate-x-1/2 -translate-y-1/2 object-contain object-center drop-shadow-[0_32px_80px_rgba(0,0,0,0.72)]"
+              className="absolute left-1/2 top-[52%] h-auto w-[90%] max-w-[760px] -translate-x-1/2 -translate-y-1/2 object-contain object-center drop-shadow-[0_32px_80px_rgba(0,0,0,0.72)]"
             />
-
-            <p className="relative z-10 mt-auto max-w-xs text-[11px] uppercase tracking-[0.28em] text-white/45">
-              AI Content Creator / Graphic Designer
-            </p>
           </div>
 
           <div className="relative z-10 flex flex-col justify-between gap-9">
@@ -123,7 +120,7 @@ export function About() {
                 transition={{ duration: 0.58, delay: 0.36, ease }}
               >
                 <h3 className="font-display text-3xl font-bold text-white md:text-4xl">
-                  Education
+                  Professional Experience
                 </h3>
                 <ul className="mt-4 space-y-3 text-sm text-white/68">
                   {education.map((item) => (

@@ -11,7 +11,6 @@ import { Contact } from "@/components/portfolio/Contact";
 import { Footer } from "@/components/portfolio/Footer";
 import { ScrollProgress } from "@/components/portfolio/ScrollProgress";
 import { CursorGlow } from "@/components/portfolio/CursorGlow";
-import DarkVeil from "@/components/portfolio/DarkVeil";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -38,16 +37,6 @@ function Index() {
 
   return (
     <div className="grain relative min-h-screen overflow-x-hidden">
-      <div className="pointer-events-none fixed inset-0 z-0">
-        <DarkVeil
-          hueShift={0}
-          noiseIntensity={0}
-          scanlineIntensity={0}
-          speed={0.5}
-          scanlineFrequency={0}
-          warpAmount={0}
-        />
-      </div>
       <Toaster theme={isDark ? "dark" : "light"} position="bottom-center" />
       <ScrollProgress />
       <CursorGlow />

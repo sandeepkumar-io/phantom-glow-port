@@ -11,6 +11,7 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { DarkVeil } from "../components/portfolio/DarkVeil";
 
 function NotFoundComponent() {
   return (
@@ -78,17 +79,37 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Lovable App" },
-      { name: "description", content: "A premium cinematic portfolio website showcasing digital development expertise with a modern, creative aesthetic." },
+      {
+        name: "description",
+        content:
+          "A premium cinematic portfolio website showcasing digital development expertise with a modern, creative aesthetic.",
+      },
       { name: "author", content: "Lovable" },
       { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "A premium cinematic portfolio website showcasing digital development expertise with a modern, creative aesthetic." },
+      {
+        property: "og:description",
+        content:
+          "A premium cinematic portfolio website showcasing digital development expertise with a modern, creative aesthetic.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
       { name: "twitter:title", content: "Lovable App" },
-      { name: "twitter:description", content: "A premium cinematic portfolio website showcasing digital development expertise with a modern, creative aesthetic." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/ea2363b0-6080-46aa-a80a-7b2c87401527/id-preview-59b815cc--89f88665-54e0-4386-9f8a-c116e019af84.lovable.app-1780470187927.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/ea2363b0-6080-46aa-a80a-7b2c87401527/id-preview-59b815cc--89f88665-54e0-4386-9f8a-c116e019af84.lovable.app-1780470187927.png" },
+      {
+        name: "twitter:description",
+        content:
+          "A premium cinematic portfolio website showcasing digital development expertise with a modern, creative aesthetic.",
+      },
+      {
+        property: "og:image",
+        content:
+          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/ea2363b0-6080-46aa-a80a-7b2c87401527/id-preview-59b815cc--89f88665-54e0-4386-9f8a-c116e019af84.lovable.app-1780470187927.png",
+      },
+      {
+        name: "twitter:image",
+        content:
+          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/ea2363b0-6080-46aa-a80a-7b2c87401527/id-preview-59b815cc--89f88665-54e0-4386-9f8a-c116e019af84.lovable.app-1780470187927.png",
+      },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -133,8 +154,29 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-      <Outlet />
+      <div
+        style={{
+          width: "100vw",
+          height: "100vh",
+          position: "fixed",
+          inset: 0,
+          zIndex: 0,
+          overflow: "hidden",
+        }}
+      >
+        <DarkVeil
+          hueShift={0}
+          noiseIntensity={0}
+          scanlineIntensity={0}
+          speed={0.5}
+          scanlineFrequency={0}
+          warpAmount={0}
+        />
+      </div>
+      <div style={{ position: "relative", zIndex: 1 }}>
+        {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
+        <Outlet />
+      </div>
     </QueryClientProvider>
   );
 }
