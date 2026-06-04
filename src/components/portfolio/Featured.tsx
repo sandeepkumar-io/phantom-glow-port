@@ -5,7 +5,7 @@ const ease = [0.22, 1, 0.36, 1] as const;
 
 export function Featured() {
   return (
-    <section className="mx-auto max-w-6xl px-4 py-16">
+    <section className="mx-auto max-w-[1600px] px-4 py-16">
       <motion.div
         initial={{ opacity: 0, y: 60 }}
         whileInView={{ opacity: 1, y: 0 }}

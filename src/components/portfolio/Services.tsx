@@ -6,7 +6,7 @@ const ease = [0.22, 1, 0.36, 1] as const;
 
 export function Services() {
   return (
-    <section id="services" className="relative mx-auto max-w-6xl px-4 py-28">
+    <section id="services" className="relative mx-auto max-w-[1600px] px-4 py-28">
       <motion.h2
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -14,7 +14,7 @@ export function Services() {
         transition={{ duration: 0.7, ease }}
         className="font-display text-stretch text-[14vw] font-black uppercase leading-none md:text-[8vw]"
       >
-        Services
+        Skills
       </motion.h2>
 
       <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">

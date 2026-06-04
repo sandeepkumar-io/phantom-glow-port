@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Github, Linkedin, Twitter, Mail } from "lucide-react";
 import { toast } from "sonner";
-import heroPortrait from "@/assets/hero-portrait.jpg";
+import heroPortrait from "@/assets/image copy.png";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -30,7 +30,7 @@ export function Contact() {
     "w-full rounded-xl border border-border bg-secondary px-4 py-3 text-sm outline-none transition-colors focus:border-lime";
 
   return (
-    <section id="contact" className="relative mx-auto max-w-6xl px-4 py-28">
+    <section id="contact" className="relative mx-auto max-w-[1600px] px-4 py-28">
       <motion.h2
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -51,11 +51,11 @@ export function Contact() {
         >
           <img
             src={heroPortrait}
-            alt="Sandeep Kumar"
+            alt="PIYUSH CHANDRA"
             loading="lazy"
-            width={800}
-            height={1000}
-            className="h-full min-h-[400px] w-full object-cover"
+            width={700}
+            height={800}
+            className="h-full  w-full object-cover"
           />
         </motion.div>
 

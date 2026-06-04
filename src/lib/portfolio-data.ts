@@ -16,14 +16,16 @@ export interface Project {
 export const projects: Project[] = [
   {
     title: "AI Video Generator",
-    description: "A text-to-video studio that turns prompts into cinematic clips with real-time previews.",
+    description:
+      "A text-to-video studio that turns prompts into cinematic clips with real-time previews.",
     tags: ["Next.js", "TypeScript", "AI"],
     image: project1,
     link: "#",
   },
   {
     title: "AI Image Cleaner",
-    description: "One-tap tool to remove noise, objects and imperfections using on-device AI models.",
+    description:
+      "One-tap tool to remove noise, objects and imperfections using on-device AI models.",
     tags: ["React", "Tailwind", "AI"],
     image: project2,
     link: "#",
@@ -58,17 +60,42 @@ export const projects: Project[] = [
   },
 ];
 
-export const skills: string[] = [
-  "React.js",
-  "Next.js",
-  "TypeScript",
-  "JavaScript",
-  "Tailwind CSS",
-  "Node.js",
-  "MongoDB",
-  "API Integration",
-  "AI Tools",
+export interface SkillGroup {
+  title: string;
+  items: string[];
+}
+
+export const skillGroups: SkillGroup[] = [
+  {
+    title: "Expertise",
+    items: [
+      "AI Content Creation",
+      "Social Media Management",
+      "Visual Storytelling",
+      "Graphic Design & Branding",
+      "Content Strategy & Campaign Planning",
+      "Brand Building & Creative Direction",
+    ],
+  },
+  {
+    title: "Tools & Technologies",
+    items: [
+      "Gemini",
+      "Midjourney",
+      "Leonardo AI",
+      "Kling AI",
+      "Veo 3",
+      "Seedance AI",
+      "Flow AI",
+      "Grok",
+      "Higgsfield",
+      "Runway ML",
+      "Eleven Labs",
+    ],
+  },
 ];
+
+export const skills: string[] = skillGroups.flatMap((group) => group.items);
 
 export interface Service {
   title: string;
@@ -77,18 +104,48 @@ export interface Service {
 }
 
 export const services: Service[] = [
-  { number: "01", title: "Frontend Development", description: "Pixel-perfect, performant interfaces built with React & Next.js." },
-  { number: "02", title: "AI Website Design", description: "Modern AI-powered web experiences that feel alive and intelligent." },
-  { number: "03", title: "Dashboard Development", description: "Data-dense admin panels with charts, tables and live updates." },
-  { number: "04", title: "API Integration", description: "Reliable REST & third-party integrations wired into your product." },
-  { number: "05", title: "Responsive UI Development", description: "Fluid layouts that look flawless on every screen size." },
-  { number: "06", title: "Landing Page Design", description: "High-converting, cinematic landing pages with bold motion." },
+  {
+    number: "01",
+    title: "AI Content Creation",
+    description:
+      "AI-generated images, videos, campaign visuals and brand assets for digital launches.",
+  },
+  {
+    number: "02",
+    title: "Social Media Management",
+    description:
+      "Complete social media presence, content calendars and audience engagement strategy.",
+  },
+  {
+    number: "03",
+    title: "Graphic Design & Branding",
+    description:
+      "Banners, product creatives, promotional campaigns and polished visual identities.",
+  },
+  {
+    number: "04",
+    title: "Campaign Strategy",
+    description:
+      "Seasonal, festive and high-converting campaign planning from concept to execution.",
+  },
+  {
+    number: "05",
+    title: "Visual Storytelling",
+    description:
+      "Creative concepts that turn brand messages into clear, memorable visual narratives.",
+  },
+  {
+    number: "06",
+    title: "AI Creative Workflow",
+    description:
+      "Image enhancement, background replacement and faster production using modern AI tools.",
+  },
 ];
 
 export const navLinks = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
   { label: "Projects", href: "#projects" },
-  { label: "Blog", href: "#services" },
+  { label: "Skills", href: "#services" },
   { label: "Contact", href: "#contact" },
 ];

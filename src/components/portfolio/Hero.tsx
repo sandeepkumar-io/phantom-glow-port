@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { ArrowUpRight, MousePointer2 } from "lucide-react";
-import heroPortrait from "@/assets/hero-portrait.jpg";
+import heroPortrait from "@/assets/image copy.png";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -56,7 +56,7 @@ export function Hero() {
         className="pointer-events-none absolute bottom-10 right-0 h-80 w-80 rounded-full bg-lime/20 blur-[120px]"
       />
 
-      <div className="relative z-10 mx-auto w-full max-w-6xl">
+      <div className="relative z-10 mx-auto w-full max-w-[1600px]">
         <motion.p
           custom={0}
           variants={rise}
@@ -64,7 +64,7 @@ export function Hero() {
           animate="show"
           className="mb-6 text-center text-sm font-medium uppercase tracking-[0.3em] text-muted-foreground"
         >
-          Sandeep Kumar — Frontend Developer
+          PIYUSH CHANDRA — designer & developer
         </motion.p>
 
         <div className="grid items-center gap-6 md:grid-cols-[1fr_auto_1fr]">
@@ -90,17 +90,14 @@ export function Hero() {
             <div className="overflow-hidden rounded-[2rem] border border-border shadow-2xl">
               <img
                 src={heroPortrait}
-                alt="Sandeep Kumar portrait"
+                alt="PIYUSH CHANDRA portrait"
                 width={800}
                 height={1000}
                 className="h-full w-full object-cover"
               />
             </div>
             {/* glowing button */}
-            <motion.div
-              style={{ x: pX, y: pY }}
-              className="absolute -bottom-6 -right-6"
-            >
+            <motion.div style={{ x: pX, y: pY }} className="absolute -bottom-6 -right-6">
               <button className="flex h-16 w-16 items-center justify-center rounded-full bg-lime text-lime-foreground glow-lime">
                 <MousePointer2 className="h-6 w-6" />
               </button>
@@ -113,39 +110,12 @@ export function Hero() {
               variants={rise}
               initial="hidden"
               animate="show"
-              className="font-display text-stretch text-center text-[18vw] font-black uppercase md:text-left md:text-[6.5vw]"
+              className="font-display text-stretch text-center text-[15vw] font-black uppercase md:text-left md:text-[6.5vw]"
             >
-              Developer
+              Designer
             </motion.h1>
-            <motion.p
-              custom={4}
-              variants={rise}
-              initial="hidden"
-              animate="show"
-              className="mt-4 max-w-xs text-center text-sm text-muted-foreground md:text-left"
-            >
-              I'm a frontend developer building modern AI-powered web experiences.
-            </motion.p>
           </div>
         </div>
-
-        {/* floating preview card */}
-        <motion.div
-          custom={5}
-          variants={rise}
-          initial="hidden"
-          animate="show"
-          style={{ x: pX, y: pY }}
-          className="glass mx-auto mt-10 flex w-fit items-center gap-3 rounded-2xl border border-border p-3 md:absolute md:right-6 md:top-40"
-        >
-          <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-lime/20 text-lime">
-            <ArrowUpRight className="h-5 w-5" />
-          </span>
-          <div className="text-left">
-            <p className="text-xs font-semibold">Available for work</p>
-            <p className="text-xs text-muted-foreground">2026 — Open to projects</p>
-          </div>
-        </motion.div>
 
         <motion.div
           initial={{ opacity: 0 }}

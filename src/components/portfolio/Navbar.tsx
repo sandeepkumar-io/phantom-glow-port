@@ -15,17 +15,23 @@ export function Navbar({ isDark, onToggle }: { isDark: boolean; onToggle: () => 
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
       className="fixed inset-x-0 top-0 z-50 px-4 pt-4"
     >
-      <nav className="glass mx-auto flex max-w-6xl items-center justify-between rounded-full border border-border px-4 py-2.5">
+      <nav className="glass mx-auto flex max-w-[1600px] items-center justify-between rounded-full border border-border px-4 py-2.5">
         <a href="#home" className="flex items-center gap-3">
           <span className="flex h-9 w-9 items-center justify-center rounded-full bg-lime text-sm font-bold text-lime-foreground">
-            SK
+            PC
           </span>
-          <span className="hidden text-sm font-semibold tracking-tight sm:block">Sandeep Kumar</span>
+          <span className="hidden text-sm font-semibold tracking-tight sm:block">
+            PIYUSH CHANDRA
+          </span>
         </a>
 
         <div className="hidden items-center gap-7 md:flex">
           {navLinks.map((l) => (
-            <a key={l.label} href={l.href} className="nav-link text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+            <a
+              key={l.label}
+              href={l.href}
+              className="nav-link text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+            >
               {l.label}
             </a>
           ))}
@@ -53,7 +59,7 @@ export function Navbar({ isDark, onToggle }: { isDark: boolean; onToggle: () => 
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className="glass mx-auto mt-2 flex max-w-6xl flex-col gap-1 rounded-3xl border border-border p-4 md:hidden"
+            className="glass mx-auto mt-2 flex max-w-[1600px] flex-col gap-1 rounded-3xl border border-border p-4 md:hidden"
           >
             {navLinks.map((l) => (
               <a

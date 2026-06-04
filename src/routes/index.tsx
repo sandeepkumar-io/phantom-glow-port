@@ -11,20 +11,22 @@ import { Contact } from "@/components/portfolio/Contact";
 import { Footer } from "@/components/portfolio/Footer";
 import { ScrollProgress } from "@/components/portfolio/ScrollProgress";
 import { CursorGlow } from "@/components/portfolio/CursorGlow";
+import DarkVeil from "@/components/portfolio/DarkVeil";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Sandeep Kumar — Frontend Developer & AI Web Experiences" },
+      { title: "PIYUSH CHANDRA — Frontend Developer & AI Web Experiences" },
       {
         name: "description",
         content:
-          "Sandeep Kumar is a frontend developer building modern, cinematic, AI-powered web experiences with React, Next.js and TypeScript.",
+          "PIYUSH CHANDRA is a frontend developer building modern, cinematic, AI-powered web experiences with React, Next.js and TypeScript.",
       },
-      { property: "og:title", content: "Sandeep Kumar — Frontend Developer" },
+      { property: "og:title", content: "PIYUSH CHANDRA — Frontend Developer" },
       {
         property: "og:description",
-        content: "Premium, cinematic portfolio of a frontend developer crafting AI-powered web experiences.",
+        content:
+          "Premium, cinematic portfolio of a frontend developer crafting AI-powered web experiences.",
       },
     ],
   }),
@@ -36,6 +38,16 @@ function Index() {
 
   return (
     <div className="grain relative min-h-screen overflow-x-hidden">
+      <div className="pointer-events-none fixed inset-0 z-0">
+        <DarkVeil
+          hueShift={0}
+          noiseIntensity={0}
+          scanlineIntensity={0}
+          speed={0.5}
+          scanlineFrequency={0}
+          warpAmount={0}
+        />
+      </div>
       <Toaster theme={isDark ? "dark" : "light"} position="bottom-center" />
       <ScrollProgress />
       <CursorGlow />
