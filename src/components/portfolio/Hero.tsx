@@ -42,72 +42,71 @@ export function Hero() {
       onMouseLeave={onLeave}
       className="relative flex min-h-screen flex-col justify-center overflow-hidden px-4 pb-12 pt-28"
     >
-      <div className="relative z-10 mx-auto w-full max-w-[1600px]">
-
-        <div className="grid items-center gap-6 md:grid-cols-3">
-          <motion.h1
-            custom={1}
-            variants={rise}
-            initial="hidden"
-            animate="show"
-            className="font-display text-stretch text-center text-[18vw] font-black uppercase md:text-[6.5vw]"
-          >
-            Digital
-          </motion.h1>
-
-          {/* center image */}
-          <motion.div
-            custom={2}
-            variants={rise}
-            initial="hidden"
-            animate="show"
-            style={{ rotateX: rotX, rotateY: rotY, transformPerspective: 900 }}
-            className="relative mx-auto w-[76vw] max-w-[380px] md:w-[24vw]"
-          >
-            <div className="overflow-hidden rounded-[2rem] border border-border shadow-2xl">
-              <img
-                src={heroPortrait}
-                alt="PIYUSH CHANDRA portrait"
-                width={800}
-                height={1000}
-                className="h-full w-full object-cover"
-              />
-            </div>
-            {/* glowing button */}
-            <motion.div style={{ x: pX, y: pY }} className="absolute -bottom-6 -right-6">
-              <button className="flex h-16 w-16 items-center justify-center rounded-full bg-lime text-lime-foreground glow-lime">
-                <MousePointer2 className="h-6 w-6" />
-              </button>
-            </motion.div>
-          </motion.div>
-
-          <div className="flex flex-col items-center">
-            <motion.h1
-              custom={3}
-              variants={rise}
-              initial="hidden"
-              animate="show"
-              className="font-display text-stretch text-center text-[15vw] font-black uppercase md:text-[6.5vw]"
-            >
-              Designer
-            </motion.h1>
-          </div>
-        </div>
-
+      <div className="grid grid-cols-[1fr_auto_1fr] items-center">
+        {/* Left */}
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1, duration: 1 }}
-          className="mt-14 overflow-hidden"
+          custom={1}
+          variants={rise}
+          initial="hidden"
+          animate="show"
+          className="flex flex-col items-end"
         >
-          {/* <motion.p
-            initial={{ y: "100%" }}
-            animate={{ y: 0 }}
-            transition={{ delay: 0.9, duration: 0.9, ease }}
-            className="text-center font-display text-[9vw] font-extrabold uppercase leading-none text-muted-foreground/40 md:text-[5vw]"
+          <h1 className="font-display text-[18vw] font-black uppercase leading-none md:text-[7vw] md:-translate-y-20">
+            DIGITAL
+          </h1>
+
+          <p className="mt-4 w-[280px] text-right text-sm text-muted-foreground">
+            Building modern web experiences with clean design and smooth interactions.
+          </p>
+        </motion.div>
+
+        {/* Center Image */}
+        <motion.div
+          custom={2}
+          variants={rise}
+          initial="hidden"
+          animate="show"
+          style={{
+            rotateX: rotX,
+            rotateY: rotY,
+            transformPerspective: 900,
+          }}
+          className="relative mx-4 w-[280px] shrink-0 md:w-[300px]"
+        >
+          <div className="overflow-hidden rounded-[2rem] border border-border shadow-2xl">
+            <img
+              src={heroPortrait}
+              alt="PIYUSH CHANDRA portrait"
+              className="h-full w-full object-cover"
+            />
+          </div>
+
+          {/* Floating Button */}
+          <motion.div
+            style={{ x: pX, y: pY }}
+            className="absolute -bottom-6 -right-6"
           >
-            The only portfolio you need
-          </motion.p> */}
+            <button className="flex h-16 w-16 items-center justify-center rounded-full bg-lime text-lime-foreground glow-lime">
+              <MousePointer2 className="h-6 w-6" />
+            </button>
+          </motion.div>
+        </motion.div>
+
+        {/* Right */}
+        <motion.div
+          custom={3}
+          variants={rise}
+          initial="hidden"
+          animate="show"
+          className="flex flex-col items-start"
+        >
+          <h1 className="font-display text-[18vw] font-black uppercase leading-none md:text-[7vw] md:translate-y-16">
+            DESIGNER
+          </h1>
+
+          <p className="mt-4 w-[280px] text-left text-sm text-muted-foreground">
+            Crafting impactful visuals, brands, and user-focused digital products.
+          </p>
         </motion.div>
       </div>
     </section>

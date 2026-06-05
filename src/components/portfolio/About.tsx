@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
-import { Instagram, Linkedin, Mail, MessageCircle, Send } from "lucide-react";
+import { Instagram, Linkedin, Mail } from "lucide-react";
 import { skillGroups } from "@/lib/portfolio-data";
 import heroPortrait from "@/assets/piyush.png";
+import { WhatsAppIcon } from "./WhatsAppIcon";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -19,11 +20,18 @@ const workExperience = [
 ];
 
 const socialLinks = [
-  { label: "LinkedIn", icon: Linkedin, href: "#" },
+  {
+    label: "LinkedIn",
+    icon: Linkedin,
+    href: "https://www.linkedin.com/in/piyush-chandra-digitalmarketer/",
+  },
   { label: "Email", icon: Mail, href: "#contact" },
-  { label: "WhatsApp", icon: MessageCircle, href: "#" },
-  { label: "Instagram", icon: Instagram, href: "#" },
-  
+  { label: "WhatsApp", icon: WhatsAppIcon, href: "https://wa.me/919811970043" },
+  {
+    label: "Instagram",
+    icon: Instagram,
+    href: "https://www.instagram.com/piyush77.___?igsh=Nmd4MndpaXVyeWl4",
+  },
 ];
 
 export function About() {
@@ -164,9 +172,11 @@ export function About() {
                   href={social.href}
                   aria-label={social.label}
                   title={social.label}
+                  target={social.href.startsWith("http") ? "_blank" : undefined}
+                  rel={social.href.startsWith("http") ? "noreferrer" : undefined}
                   className="flex h-12 w-12 items-center justify-center rounded border border-white/12 bg-white/[0.07] text-white/70 transition-colors hover:border-blue-400/60 hover:bg-blue-500/20 hover:text-white"
                 >
-                  <social.icon className="h-5 w-5" />
+                  <social.icon className={social.label === "WhatsApp" ? "h-6 w-6" : "h-5 w-5"} />
                 </a>
               ))}
             </motion.div>

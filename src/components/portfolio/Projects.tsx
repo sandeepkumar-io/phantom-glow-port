@@ -46,6 +46,8 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
         />
         <a
           href={project.link}
+          target="_blank"
+          rel="noreferrer"
           className="absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-full bg-lime text-lime-foreground opacity-0 transition-opacity duration-300 group-hover:opacity-100"
           aria-label={`View ${project.title}`}
         >
@@ -67,6 +69,8 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
         </div>
         <a
           href={project.link}
+          target="_blank"
+          rel="noreferrer"
           className="mt-4 inline-flex items-center gap-1 text-xs font-semibold text-foreground nav-link"
         >
           View Project <ArrowUpRight className="h-3.5 w-3.5 text-lime" />

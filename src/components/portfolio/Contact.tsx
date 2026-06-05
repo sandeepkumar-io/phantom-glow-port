@@ -1,16 +1,25 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Instagram, Linkedin, Mail, MapPin, MessageCircle, Send } from "lucide-react";
+import { Instagram, Linkedin, Mail, MapPin, Send } from "lucide-react";
 import { toast } from "sonner";
 import { useServerFn } from "@tanstack/react-start";
 import { sendContactEmail } from "@/lib/api/contact.functions";
+import { WhatsAppIcon } from "./WhatsAppIcon";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
 const socials = [
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Instagram, href: "#", label: "Instagram" },
-  { icon: MessageCircle, href: "#", label: "WhatsApp" },
+  {
+    icon: Linkedin,
+    href: "https://www.linkedin.com/in/piyush-chandra-digitalmarketer/",
+    label: "LinkedIn",
+  },
+  {
+    icon: Instagram,
+    href: "https://www.instagram.com/piyush77.___?igsh=Nmd4MndpaXVyeWl4",
+    label: "Instagram",
+  },
+  { icon: WhatsAppIcon, href: "https://wa.me/919811970043", label: "WhatsApp" },
   { icon: Mail, href: "mailto:Piyushchandra2506@gmail.com", label: "Email" },
 ];
 
@@ -97,9 +106,11 @@ export function Contact() {
                   href={social.href}
                   aria-label={social.label}
                   title={social.label}
+                  target={social.href.startsWith("http") ? "_blank" : undefined}
+                  rel={social.href.startsWith("http") ? "noreferrer" : undefined}
                   className="flex h-11 w-11 items-center justify-center rounded-full border border-border bg-secondary text-muted-foreground transition-colors hover:bg-lime hover:text-lime-foreground"
                 >
-                  <social.icon className="h-5 w-5" />
+                  <social.icon className={social.label === "WhatsApp" ? "h-6 w-6" : "h-5 w-5"} />
                 </a>
               ))}
             </div>

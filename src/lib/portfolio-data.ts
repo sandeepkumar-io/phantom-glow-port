@@ -15,46 +15,50 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    title: "AI Video Generator",
+    title: "Gulbhahar Brand Growth",
     description:
-      "A text-to-video studio that turns prompts into cinematic clips with real-time previews.",
-    tags: ["Next.js", "TypeScript", "AI"],
+      "Developed creative campaigns for a luxury ethnic fashion brand. Enhanced brand presence through visuals, content, and digital marketing.",
+    tags: ["Fashion Brand", "Campaigns", "Brand Growth"],
     image: project1,
-    link: "#",
+    link: "https://www.gulbhahar.com/",
   },
   {
-    title: "AI Image Cleaner",
+    title: "Reeltor Marketing Campaign",
     description:
-      "One-tap tool to remove noise, objects and imperfections using on-device AI models.",
-    tags: ["React", "Tailwind", "AI"],
+      "Created engaging real estate marketing creatives and content strategies. Focused on lead generation, brand awareness, and audience engagement.",
+    tags: ["Real Estate", "Lead Generation", "Content Strategy"],
     image: project2,
-    link: "#",
+    link: "https://www.reeltor.com/",
   },
   {
-    title: "Real Estate CMS Dashboard",
-    description: "A data-rich admin to manage listings, leads and analytics with live charts.",
-    tags: ["React", "Node.js", "MongoDB"],
+    title: "AI Creative Studio",
+    description:
+      "Produced AI-generated images, videos, and commercial ad creatives. Leveraged cutting-edge AI tools to deliver high-quality visual content.",
+    tags: ["AI Visuals", "Ad Creatives", "Video"],
     image: project3,
     link: "#",
   },
   {
-    title: "Background Remover App",
-    description: "Instantly cut out backgrounds from any photo with crisp, AI-powered edges.",
-    tags: ["Next.js", "AI", "Canvas"],
+    title: "Social Media Strategy",
+    description:
+      "Planned and executed content strategies across social platforms. Optimized engagement, reach, and brand communication through data-driven content.",
+    tags: ["Social Media", "Engagement", "Strategy"],
     image: project4,
     link: "#",
   },
   {
-    title: "College Website",
-    description: "A modern, responsive university website with admissions and program discovery.",
-    tags: ["React", "Tailwind", "UI"],
+    title: "Brand Identity Design",
+    description:
+      "Designed cohesive visual identities and marketing assets for brands. Focused on storytelling, consistency, and memorable brand experiences.",
+    tags: ["Brand Identity", "Marketing Assets", "Storytelling"],
     image: project5,
     link: "#",
   },
   {
-    title: "Property Posting Dashboard",
-    description: "A streamlined dashboard for agents to post, edit and track property listings.",
-    tags: ["React", "API", "Dashboard"],
+    title: "AI Video Production",
+    description:
+      "Created AI-powered video advertisements and promotional content. Transformed ideas into cinematic visuals using advanced AI workflows.",
+    tags: ["AI Video", "Advertisements", "Promotional Content"],
     image: project6,
     link: "#",
   },
@@ -70,27 +74,18 @@ export const skillGroups: SkillGroup[] = [
     title: "Expertise",
     items: [
       "AI Content Creation",
+      "Digital Marketing Strategy",
       "Social Media Management",
+      "Brand Identity Design",
       "Visual Storytelling",
-      "Graphic Design & Branding",
-      "Content Strategy & Campaign Planning",
-      "Brand Building & Creative Direction",
+      "Campaign Planning & Execution",
     ],
   },
   {
     title: "Tools & Technologies",
     items: [
-      "Gemini",
-      "Midjourney",
-      "Leonardo AI",
-      "Kling AI",
-      "Veo 3",
-      "Seedance AI",
-      "Flow AI",
-      "Grok",
-      "Higgsfield",
-      "Runway ML",
-      "Eleven Labs",
+      "Campaign Planning & Execution",
+      "Visual Storytelling",
     ],
   },
 ];
@@ -106,39 +101,39 @@ export interface Service {
 export const services: Service[] = [
   {
     number: "01",
-    title: "AI Content Creation",
+    title: "AI Creative Direction",
     description:
-      "AI-generated images, videos, campaign visuals and brand assets for digital launches.",
+      "Creating AI-powered visuals, videos, and campaigns that transform ideas into engaging brand experiences.",
   },
   {
     number: "02",
-    title: "Social Media Management",
+    title: "Digital Marketing Strategy",
     description:
-      "Complete social media presence, content calendars and audience engagement strategy.",
+      "Developing data-driven marketing strategies focused on growth, engagement, and brand visibility.",
   },
   {
     number: "03",
-    title: "Graphic Design & Branding",
+    title: "Brand Identity Design",
     description:
-      "Banners, product creatives, promotional campaigns and polished visual identities.",
+      "Crafting cohesive visual identities that help brands stand out and leave a lasting impression.",
   },
   {
     number: "04",
-    title: "Campaign Strategy",
+    title: "Social Media Growth",
     description:
-      "Seasonal, festive and high-converting campaign planning from concept to execution.",
+      "Building content systems and platform strategies that drive audience engagement and community growth.",
   },
   {
     number: "05",
     title: "Visual Storytelling",
     description:
-      "Creative concepts that turn brand messages into clear, memorable visual narratives.",
+      "Turning concepts into compelling visual narratives that connect brands with their target audience.",
   },
   {
     number: "06",
-    title: "AI Creative Workflow",
+    title: "AI Video Production",
     description:
-      "Image enhancement, background replacement and faster production using modern AI tools.",
+      "Producing cinematic AI-generated commercials, fashion campaigns, and promotional content at scale.",
   },
 ];
 
