@@ -38,7 +38,7 @@ export function Navbar({ isDark, onToggle }: { isDark: boolean; onToggle: () => 
         </div>
 
         <div className="flex items-center gap-3">
-          <ThemeToggle isDark={isDark} onToggle={onToggle} />
+          {/* <ThemeToggle isDark={isDark} onToggle={onToggle} /> */}
           <Magnetic className="hidden sm:block">
             <a
               href="#contact"

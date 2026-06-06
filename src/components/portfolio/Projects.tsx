@@ -93,9 +93,6 @@ export function Projects() {
         >
           Projects
         </motion.h2>
-        <span className="hidden text-sm text-muted-foreground md:block">
-          Selected work — 2024 / 2026
-        </span>
       </div>
 
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
