@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState, type VideoHTMLAttributes } from "react";
 import { motion } from "framer-motion";
 import {
   Carousel,
@@ -24,6 +24,71 @@ const featuredVideos = [
   { src: video5, label: "AI Creative Web Experience video 5" },
   { src: video6, label: "AI Creative Web Experience video 6" },
 ];
+
+type LazyVideoProps = Omit<VideoHTMLAttributes<HTMLVideoElement>, "src"> & {
+  label: string;
+  rootMargin?: string;
+  src: string;
+};
+
+function LazyVideo({
+  label,
+  preload = "metadata",
+  rootMargin = "400px",
+  src,
+  ...props
+}: LazyVideoProps) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [shouldLoad, setShouldLoad] = useState(false);
+
+  useEffect(() => {
+    if (shouldLoad) {
+      return;
+    }
+
+    const video = videoRef.current;
+    if (!video) {
+      return;
+    }
+
+    if (!("IntersectionObserver" in window)) {
+      setShouldLoad(true);
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setShouldLoad(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin },
+    );
+
+    observer.observe(video);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [rootMargin, shouldLoad]);
+
+  useEffect(() => {
+    if (shouldLoad && props.autoPlay) {
+      void videoRef.current?.play().catch(() => undefined);
+    }
+  }, [props.autoPlay, shouldLoad]);
+
+  return (
+    <video
+      ref={videoRef}
+      src={shouldLoad ? src : undefined}
+      aria-label={label}
+      preload={shouldLoad ? preload : "none"}
+      {...props}
+    />
+  );
+}
 
 export function Featured() {
   const [carouselApi, setCarouselApi] = useState<CarouselApi>();
@@ -73,14 +138,15 @@ export function Featured() {
         transition={{ duration: 0.9, ease }}
         className="group relative overflow-hidden rounded-[2.5rem] border border-border"
       >
-        <video
+        <LazyVideo
           src={featuredExperienceVideo}
-          aria-label="AI Creative Web Experience"
+          label="AI Creative Web Experience"
           autoPlay
           loop
           muted
           playsInline
           preload="metadata"
+          rootMargin="600px"
           className="h-[60vh] w-full object-cover transition-transform duration-[1.2s] group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
@@ -113,9 +179,9 @@ export function Featured() {
                 transition={{ duration: 0.55, delay: i * 0.08, ease }}
                 className="overflow-hidden rounded-[1.4rem] border border-border bg-card/60"
               >
-                <video
+                <LazyVideo
                   src={video.src}
-                  aria-label={video.label}
+                  label={video.label}
                   autoPlay
                   loop
                   muted
