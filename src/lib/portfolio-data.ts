@@ -83,10 +83,7 @@ export const skillGroups: SkillGroup[] = [
   },
   {
     title: "Tools & Technologies",
-    items: [
-      "Campaign Planning & Execution",
-      "Visual Storytelling",
-    ],
+    items: ["Campaign Planning & Execution", "Visual Storytelling"],
   },
 ];
 

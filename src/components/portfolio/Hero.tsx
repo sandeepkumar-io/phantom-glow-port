@@ -1,10 +1,5 @@
 import { useRef } from "react";
-import {
-  motion,
-  useMotionValue,
-  useSpring,
-  useTransform,
-} from "framer-motion";
+import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { ArrowUpRight, MousePointer2, Sparkles } from "lucide-react";
 import heroPortrait from "@/assets/piyush.png";
 
@@ -90,8 +85,7 @@ export function Hero() {
           initial="hidden"
           animate="show"
           className="mb-8 md:mb-10"
-        >
-        </motion.div>
+        ></motion.div>
 
         {/* ── Hero Grid: Text + Image ─────────────────── */}
         <div className="flex flex-col items-center gap-10 lg:grid lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:gap-16">
@@ -117,9 +111,8 @@ export function Hero() {
               animate="show"
               className="mx-auto mt-6 max-w-md text-base leading-relaxed text-muted-foreground sm:text-lg md:mt-8 lg:mx-0 lg:max-w-lg"
             >
-              Crafting impactful visuals, brands, and user-focused digital
-              products — blending creativity with strategy for memorable
-              experiences.
+              Crafting impactful visuals, brands, and user-focused digital products — blending
+              creativity with strategy for memorable experiences.
             </motion.p>
 
             {/* CTA Row */}
@@ -164,9 +157,7 @@ export function Hero() {
                   <p className="font-display text-2xl font-black text-foreground sm:text-3xl">
                     {stat.value}
                   </p>
-                  <p className="mt-1 text-xs text-muted-foreground sm:text-sm">
-                    {stat.label}
-                  </p>
+                  <p className="mt-1 text-xs text-muted-foreground sm:text-sm">{stat.label}</p>
                 </div>
               ))}
             </motion.div>
@@ -193,14 +184,14 @@ export function Hero() {
               <div className="absolute -inset-4 rounded-[3rem] bg-lime/10 blur-3xl" />
 
               {/* Image card */}
-             <div className="relative w-full max-w-[600px] overflow-hidden rounded-[2.5rem] border border-border/60 shadow-2xl">
-  <img
-    src={heroPortrait}
-    alt="Piyush Chandra portrait"
-    className="w-full h-auto object-cover"
-  />
-  <div className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-black/30 to-transparent" />
-</div>
+              <div className="relative w-full max-w-[600px] overflow-hidden rounded-[2.5rem] border border-border/60 shadow-2xl">
+                <img
+                  src={heroPortrait}
+                  alt="Piyush Chandra portrait"
+                  className="w-full h-auto object-cover"
+                />
+                <div className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-black/30 to-transparent" />
+              </div>
 
               {/* Floating CTA Button */}
               <motion.div
@@ -222,9 +213,7 @@ export function Hero() {
               >
                 <div className="flex items-center gap-2">
                   <Sparkles className="h-4 w-4 text-lime" />
-                  <span className="text-xs font-bold uppercase tracking-wider">
-                    Creative
-                  </span>
+                  <span className="text-xs font-bold uppercase tracking-wider">Creative</span>
                 </div>
               </motion.div>
             </motion.div>
