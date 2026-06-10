@@ -1,3 +1,4 @@
+// src\components\portfolio\Footer.tsx
 export function Footer() {
   return (
     <footer className="border-t border-border px-4 py-10">

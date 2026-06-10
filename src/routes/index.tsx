@@ -1,3 +1,4 @@
+// src\routes\index.tsx
 import { createFileRoute } from "@tanstack/react-router";
 import { Toaster } from "sonner";
 import { useTheme } from "@/hooks/use-theme";

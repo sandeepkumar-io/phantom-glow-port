@@ -1,3 +1,4 @@
+// src\components\portfolio\Hero.tsx
 import { useRef } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { ArrowUpRight, MousePointer2, Sparkles } from "lucide-react";
