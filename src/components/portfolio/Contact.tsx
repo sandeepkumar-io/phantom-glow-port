@@ -1,3 +1,4 @@
+// src\components\portfolio\Contact.tsx
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Instagram, Linkedin, Mail, MapPin, Send } from "lucide-react";
@@ -75,7 +76,7 @@ export function Contact() {
         >
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.22em] text-lime">Contact</p>
-            <h2 className="mt-5 font-display text-5xl font-black uppercase leading-none md:text-7xl">
+            <h2 className="mt-5 font-display text-4xl font-black uppercase leading-none sm:text-5xl md:text-7xl">
               Let's Work Together
             </h2>
             <p className="mt-6 max-w-xl text-base leading-7 text-muted-foreground">

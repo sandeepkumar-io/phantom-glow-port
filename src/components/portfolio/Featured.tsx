@@ -1,3 +1,4 @@
+// src\components\portfolio\Featured.tsx
 import { useEffect, useRef, useState, type VideoHTMLAttributes } from "react";
 import { motion } from "framer-motion";
 import {
@@ -159,7 +160,7 @@ export function Featured() {
         transition={{ duration: 0.6, ease }}
         className="mt-24 flex items-end justify-between gap-4 md:mt-28"
       >
-        <h3 className="font-display text-6xl font-black uppercase leading-none md:text-7xl">
+        <h3 className="font-display text-4xl font-black uppercase leading-none sm:text-5xl md:text-7xl">
           AI Video Showcase
         </h3>
       </motion.div>
@@ -187,7 +188,7 @@ export function Featured() {
                   muted
                   playsInline
                   preload="metadata"
-                  className="h-[620px] w-full object-cover md:h-[720px]"
+                  className="h-[440px] w-full object-cover sm:h-[520px] md:h-[640px] xl:h-[720px]"
                 />
               </motion.div>
             </CarouselItem>

@@ -1,3 +1,4 @@
+// src\components\portfolio\About.tsx
 import { motion } from "framer-motion";
 import { Instagram, Linkedin, Mail } from "lucide-react";
 import { skillGroups } from "@/lib/portfolio-data";
@@ -66,7 +67,7 @@ export function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.65, delay: 0.18, ease }}
-                className="font-display whitespace-nowrap text-4xl font-black uppercase leading-[0.86] sm:text-5xl md:text-6xl xl:text-7xl"
+                className="font-display text-3xl font-black uppercase leading-[0.86] sm:whitespace-nowrap sm:text-5xl md:text-6xl xl:text-7xl"
               >
                 PIYUSH CHANDRA
               </motion.h2>
@@ -87,7 +88,7 @@ export function About() {
           </div>
 
           <div className="relative z-10 flex flex-col justify-between gap-9">
-            <div className="grid gap-8 xl:grid-cols-[1fr_0.95fr]">
+            <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-[1fr_0.95fr]">
               <motion.div
                 initial={{ opacity: 0, y: 22 }}
                 whileInView={{ opacity: 1, y: 0 }}
