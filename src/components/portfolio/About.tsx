@@ -51,13 +51,13 @@ export function About() {
 
         <div className="relative grid min-h-[680px] gap-10 lg:grid-cols-[0.9fr_1.1fr]">
           <div className="relative flex min-h-[560px] flex-col justify-between">
-            <div className="relative z-10 text-center">
+            <div className="relative z-10 mt-10 text-center">
               <motion.p
                 initial={{ opacity: 0, y: 18 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.55, delay: 0.1, ease }}
-                className="text-sm font-medium text-white/78 md:text-base"
+                className="text-xl font-xl text-white/78 md:text-medium"
               >
                 Hello, I am
               </motion.p>
@@ -66,7 +66,7 @@ export function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.65, delay: 0.18, ease }}
-                className="font-display whitespace-nowrap text-4xl font-black uppercase leading-[0.86] sm:text-5xl md:text-6xl xl:text-7xl"
+                className="font-display whitespace-nowrap text-3xl font-black uppercase leading-[0.86] sm:text-3xl md:text-4xl xl:text-5xl"
               >
                 PIYUSH CHANDRA
               </motion.h2>
@@ -82,7 +82,7 @@ export function About() {
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.24, ease }}
-              className="absolute left-1/2 top-[52%] h-auto w-[90%] max-w-[760px] -translate-x-1/2 -translate-y-1/2 object-contain object-center drop-shadow-[0_32px_80px_rgba(0,0,0,0.72)]"
+              className="absolute left-1/2 top-[52%] h-auto w-[150%] max-w-[1000px] -translate-x-1/2 -translate-y-1/2 object-contain object-center drop-shadow-[0_32px_80px_rgba(0,0,0,0.72)]"
             />
           </div>
 

@@ -6,7 +6,8 @@ import {
   CarouselItem,
   type CarouselApi,
 } from "@/components/ui/carousel";
-import featuredExperienceVideo from "@/assets/3736793-uhd_3840_2160_24fps.mp4";
+import featuredVideoMobile from "@/assets/portfolio.mp4";
+import featuredVideoDesktop from "@/assets/phone.mp4";
 import video1 from "@/assets/1.mp4";
 import video2 from "@/assets/2.mp4";
 import video3 from "@/assets/3.mp4";
@@ -139,7 +140,7 @@ export function Featured() {
         className="group relative overflow-hidden rounded-[2.5rem] border border-border"
       >
         <LazyVideo
-          src={featuredExperienceVideo}
+          src={featuredVideoMobile}
           label="AI Creative Web Experience"
           autoPlay
           loop
@@ -147,7 +148,18 @@ export function Featured() {
           playsInline
           preload="metadata"
           rootMargin="600px"
-          className="h-[60vh] w-full object-cover transition-transform duration-[1.2s] group-hover:scale-105"
+          className="h-[60vh] w-full object-cover transition-transform duration-[1.2s] group-hover:scale-105 md:hidden"
+        />
+        <LazyVideo
+          src={featuredVideoDesktop}
+          label="AI Creative Web Experience"
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="metadata"
+          rootMargin="600px"
+          className="hidden h-[60vh] w-full object-cover transition-transform duration-[1.2s] group-hover:scale-105 md:block"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
       </motion.div>

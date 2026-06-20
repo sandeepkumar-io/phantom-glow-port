@@ -6,7 +6,7 @@ const contactInputSchema = z.object({
   email: z.string().trim().email("Please enter a valid email.").max(180),
   service: z.string().trim().max(160).optional(),
   budget: z.string().trim().max(120).optional(),
-  message: z.string().trim().min(10, "Please enter a short message.").max(3000),
+  message: z.string().trim().min(1, "Please enter a message.").max(3000),
 });
 
 const escapeHtml = (value: string) =>

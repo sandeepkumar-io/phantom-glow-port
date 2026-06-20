@@ -74,7 +74,7 @@ export function Hero() {
       ref={wrapRef}
       onMouseMove={onMove}
       onMouseLeave={onLeave}
-      className="relative flex min-h-screen flex-col justify-center overflow-hidden px-5 pb-16 pt-28 sm:px-8 md:px-12 lg:px-20"
+      className="relative flex min-h-screen flex-col justify-center overflow-hidden px-5  pt-28 sm:px-8 md:px-12 lg:px-20"
     >
       {/* ── Main Content ─────────────────────────────── */}
       <div className="mx-auto w-full max-w-7xl">
@@ -169,7 +169,7 @@ export function Hero() {
             variants={scaleIn}
             initial="hidden"
             animate="show"
-            className="relative w-full max-w-[320px] sm:max-w-[360px] md:max-w-[400px] lg:max-w-none"
+            className="relative hidden w-full max-w-[320px] sm:max-w-[360px] md:max-w-[400px] lg:block lg:max-w-none"
           >
             {/* 3D‑tilt wrapper */}
             <motion.div
@@ -184,7 +184,7 @@ export function Hero() {
               <div className="absolute -inset-4 rounded-[3rem] bg-lime/10 blur-3xl" />
 
               {/* Image card */}
-              <div className="relative w-full max-w-[600px] overflow-hidden rounded-[2.5rem] border border-border/60 shadow-2xl">
+              <div className="relative w-[120%] lg:w-[140%] xl:w-[150%] overflow-hidden rounded-[2.5rem] border border-border/60 shadow-2xl">
                 <img
                   src={heroPortrait}
                   alt="Piyush Chandra portrait"

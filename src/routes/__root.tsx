@@ -78,27 +78,27 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
+      { title: "Piyush Portfolio" },
       {
         name: "description",
         content:
-          "A premium cinematic portfolio website showcasing digital development expertise with a modern, creative aesthetic.",
+          "Piyush Chandra — Digital Marketing & Creative Strategy, AI Content Creator, Graphic Designer, Social Media Strategy & Brand Growth Specialist.",
       },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
+      { name: "author", content: "Piyush Chandra" },
+      { property: "og:title", content: "Piyush Portfolio" },
       {
         property: "og:description",
         content:
-          "A premium cinematic portfolio website showcasing digital development expertise with a modern, creative aesthetic.",
+          "Piyush Chandra — Digital Marketing & Creative Strategy, AI Content Creator, Graphic Designer, Social Media Strategy & Brand Growth Specialist.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
-      { name: "twitter:title", content: "Lovable App" },
+      { name: "twitter:site", content: "@piyush_portfolio" },
+      { name: "twitter:title", content: "Piyush Portfolio" },
       {
         name: "twitter:description",
         content:
-          "A premium cinematic portfolio website showcasing digital development expertise with a modern, creative aesthetic.",
+          "Piyush Chandra — Digital Marketing & Creative Strategy, AI Content Creator, Graphic Designer, Social Media Strategy & Brand Growth Specialist.",
       },
       {
         property: "og:image",
